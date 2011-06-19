@@ -1,0 +1,12 @@
+
+	@OnMethod(clazz = "CLASS_NAME", method = "METHOD_NAME")
+	public static void onCall_METHOD_NAME() {
+		startTime = timeMillis();
+	}
+
+	@OnMethod(clazz = "CLASS_NAME", method = "METHOD_NAME", location = @Location(Kind.RETURN))
+	public static void onReturn_METHOD_NAME() {
+		print(strcat(str(timeMillis()),
+				" CLASS_NAME#METHOD_NAME"));
+		println(strcat(":(ms) ", str(timeMillis() - startTime)));
+	}

@@ -1,0 +1,8 @@
+import static com.sun.btrace.BTraceUtils.*;
+
+import com.sun.btrace.annotations.*;
+
+@BTrace
+public class FILE_NAME {
+	@TLS
+	private static long startTime;
