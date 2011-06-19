@@ -6,7 +6,6 @@ then
 	exit 1
 fi
 
-mvninstall 
-mvn dependency:copy-dependencies
+mvn clean install -Dmaven.test.skip=true dependency:copy-dependencies
 cp target/perf-tool.jar  target/dependency/asm*.jar $BTRACE_HOME/build/
 cp  generate_perf_script.sh $BTRACE_HOME/bin/
