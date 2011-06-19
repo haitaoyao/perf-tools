@@ -1,5 +1,10 @@
 #!/bin/sh
 SCRIPT_DIR="$(cd $(dirname $0);pwd)"
+if [ -z "$1" ]
+then
+	echo "Usage: $0 fullTargetClassName jarFileLocation scriptLocation"
+	exit 1
+fi
 if [ -z $JAVA_HOME ];then
 	echo "NO JAVA_HOME SET"
 	exit 1
