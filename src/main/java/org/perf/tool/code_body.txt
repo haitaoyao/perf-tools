@@ -6,7 +6,7 @@
 
 	@OnMethod(clazz = "CLASS_NAME", method = "METHOD_NAME", location = @Location(Kind.RETURN))
 	public static void onReturn_METHOD_NAME() {
-		print(strcat(str(timeMillis()),
+		print(strcat(str(timestamp("yyyy-MM-dd HH:mm:ss.SSS")),
 				" CLASS_NAME#METHOD_NAME"));
 		println(strcat(":(ms) ", str(timeMillis() - startTime)));
 	}
